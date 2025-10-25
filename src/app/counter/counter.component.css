@@ -1,0 +1,38 @@
+p
+{
+   font-size: 50px;  
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;  
+  cursor: pointer;  
+  opacity: 0.9;
+  margin: 10px 10px 10px 10px;
+}
+
+button:hover
+{
+  opacity: 1;
+}
+
+.inc
+{
+    background-color: #008CBA;
+}
+
+.dec
+{
+    background-color: #f44336;
+}
+
+.reset
+{
+    color: black;
+    background-color: lightgray;
+}
