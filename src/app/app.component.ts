@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from "./counter/counter.component";
+import { Store } from '@ngrx/store';
+import { CounterState } from './counter/state/counter.reducer';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [CounterComponent],
+  imports: [CounterComponent, AsyncPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Angular-19-NgRx-Counter-App';
+  private readonly store = inject(Store<CounterState>);
+
+  protected readonly fullState$ = this.store;
 }

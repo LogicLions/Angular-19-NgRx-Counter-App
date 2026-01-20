@@ -1,6 +1,6 @@
 
 <div style="text-align: center; margin-top: 12%;">
-    <p>0</p>
+    <p>{{ (fullState$ | async).counter.count}}</p>
 
     <button class="dec" (click)="handleDecrement()">Decrement</button>
     <button class="reset" (click)="handleReset()">Reset</button>

@@ -3,10 +3,11 @@ import { CounterState } from './state/counter.reducer';
 import { Store } from '@ngrx/store';
 // import { decrement, increment, reset } from './state/counter.actions';
 import * as CounterActions from './state/counter.actions';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-counter',
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.css'
 })
@@ -14,6 +15,8 @@ import * as CounterActions from './state/counter.actions';
 export class CounterComponent {
 
 private readonly store = inject(Store<CounterState>);
+
+protected readonly fullState$ = this.store;
 
 handleIncrement()
 {
