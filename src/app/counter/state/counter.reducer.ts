@@ -1,19 +1,26 @@
 import { createReducer, on } from "@ngrx/store";
 import * as CounterActions from './counter.actions';
-import { count } from "rxjs";
 
 export interface CounterState 
 {
     count : number,
     isLoading : boolean,
-    error : string | null
+    error : string | null,
+    profileInfo: {
+        name : string,
+        age: number
+    }
 }
 
 export const initialState : CounterState = 
 {
     count : 0,
     isLoading : false,
-    error : null
+    error : null,
+    profileInfo: {
+        name: 'Sachin',
+        age: 33
+    }
 }
 
 export const counterReducer = createReducer(

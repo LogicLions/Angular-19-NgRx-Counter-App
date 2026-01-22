@@ -4,6 +4,8 @@ import { CounterComponent } from "./counter/counter.component";
 import { Store } from '@ngrx/store';
 import { CounterState } from './counter/state/counter.reducer';
 import { AsyncPipe } from '@angular/common';
+import * as CounterSelector from './counter/state/counter.selector';
+
 
 @Component({
   selector: 'app-root',
@@ -15,5 +17,5 @@ export class AppComponent {
   title = 'Angular-19-NgRx-Counter-App';
   private readonly store = inject(Store<CounterState>);
 
-  protected readonly fullState$ = this.store;
+  protected readonly count$ = this.store.select(CounterSelector.selectCount);
 }

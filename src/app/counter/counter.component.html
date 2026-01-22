@@ -1,8 +1,14 @@
 
 <div style="text-align: center; margin-top: 12%;">
-    <p>{{ (fullState$ | async).counter.count}}</p>
+    <p class="counter">{{ count$ | async}}</p>
+    
+    
 
     <button class="dec" (click)="handleDecrement()">Decrement</button>
     <button class="reset" (click)="handleReset()">Reset</button>
     <button class="inc" (click)="handleIncrement()">Increment</button>
+    <p>IsLoading: {{ isLoading$ | async }}</p>
+    <p>Error: {{error$ | async}}</p>
+    <p>Name: {{name$ | async}}</p>
+    <p>Age: {{age$ | async}}</p>
 </div>
