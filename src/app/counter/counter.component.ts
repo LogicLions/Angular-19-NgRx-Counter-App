@@ -38,8 +38,8 @@ handleReset()
   this.store.dispatch(CounterActions.reset());
 }
 
-handleLoadValue()
+triggerAsyncLoad()
 {
-
+  this.store.dispatch(CounterActions.loadInitialCount());
 }
 }

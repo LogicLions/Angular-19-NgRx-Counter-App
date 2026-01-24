@@ -42,5 +42,24 @@ export const counterReducer = createReducer(
             ...state,
             count : 0
         }
+    }),
+    on(CounterActions.loadInitialCount, (state)=>{
+        return {
+            ...state,
+            isLoading : true            
+        }
+    }),
+    on(CounterActions.loadInitialCountSuccess, (state,{value})=>{
+        return {
+            ...state,
+            count: value,
+            isLoading: false
+        }
+    }),
+    on(CounterActions.loadInitialCountError, (state, {error})=>{
+        return {
+            ...state,
+            error
+        }
     })
 )
