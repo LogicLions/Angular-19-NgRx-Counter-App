@@ -15,7 +15,7 @@ export interface CounterState
 export const initialState : CounterState = 
 {
     count : 0,
-    isLoading : true,
+    isLoading : false,
     error : null,
     profileInfo: {
         name: 'Sachin',
