@@ -15,7 +15,7 @@ export interface CounterState
 export const initialState : CounterState = 
 {
     count : 0,
-    isLoading : false,
+    isLoading : true,
     error : null,
     profileInfo: {
         name: 'Sachin',
@@ -40,7 +40,9 @@ export const counterReducer = createReducer(
     on(CounterActions.reset, (state)=>{
         return {
             ...state,
-            count : 0
+            count : 0,
+            isLoading: false,
+            error: null
         }
     }),
     on(CounterActions.loadInitialCount, (state)=>{
@@ -59,7 +61,8 @@ export const counterReducer = createReducer(
     on(CounterActions.loadInitialCountError, (state, {error})=>{
         return {
             ...state,
-            error
+            error,
+            isLoading: false
         }
     })
 )

@@ -3,12 +3,12 @@ import { CounterState } from './state/counter.reducer';
 import { Store } from '@ngrx/store';
 // import { decrement, increment, reset } from './state/counter.actions';
 import * as CounterActions from './state/counter.actions';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import * as CounterSelector from './state/counter.selector';
 
 @Component({
   selector: 'app-counter',
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, CommonModule],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.css'
 })

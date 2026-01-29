@@ -1,8 +1,13 @@
-.counter
-{
-   font-size: 50px;  
+.resultDiv{
+  height: 90px;
 }
-
+.counter {
+  font-size: 70px;
+}
+.Error {
+  font-size: 35px;
+  color: #f44336;
+}
 button {
   border: none;
   color: white;
@@ -10,51 +15,47 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 25px;  
-  cursor: pointer;  
+  font-size: 25px;
+  cursor: pointer;
   opacity: 0.9;
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
+  border-radius: 5px; /* Added for better UI */
+  transition: opacity 0.3s ease; /* Smooth hover effect */
 }
-
-button:hover
-{
+button:hover {
   opacity: 1;
 }
-
-.inc
-{
-    background-color: #008CBA;
+.inc {
+  background-color: #008cba;
 }
-
-.dec
-{
-    background-color: #f44336;
+.dec {
+  background-color: #f44336;
 }
-
-.asyncBtn{
+.asyncBtn {
   background-color: green;
 }
-
-.reset
-{
-    color: black;
-    background-color: lightgray;
+.reset {
+  color: black;
+  background-color: lightgray;
 }
-
-.loader-background{
-  position: fixed;
-  top: 10%;
-  left: 0px;
+.loader-background {
+  /* position: fixed; */
+  top: 0; /* Cover from very top */
+  left: 0;
   width: 100%;
   height: 100%;
-  background: white;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent overlay */
   z-index: 11111;
-  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center loader vertically */
 }
 
-.loader-content{
-  width:200px;
-  height:200px;  
-  margin: auto; 
-  margin-top: 1%;
+.loader-content {
+  width: 131px;
+  height: 131px;
+}
+
+.buttonsDiv {
+  margin-top: 20px;
 }
